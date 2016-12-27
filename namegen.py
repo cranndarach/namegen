@@ -26,3 +26,10 @@ def generate(clusters, vowels, max_len=12):
                 break
     name = name.title()
     return name
+
+
+def generate_many(clusters, vowels, how_many, max_len=12):
+    counter = 0
+    while counter < how_many:
+        print(generate(clusters, vowels, max_len))
+        counter += 1
