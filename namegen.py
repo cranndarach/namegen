@@ -14,6 +14,7 @@ def generate(clusters, vowels, stop_len=9, min_len=1, vowel_mod=6):
             breakchance = int(stop_len/2)
         if len(name) >= min_len and check(breakchance):
             break
+    name += rd.choice(clusters) if not check(vowel_mod) else ""
     name = name.title()
     return name
 
@@ -31,7 +32,7 @@ def generate_many(clusters, vowels, how_many, max_len=9, min_len=1,
 
 
 def check(num):
-    return True if rd.randrange(num) == num-1 else False
+    return True if rd.randrange(num) == 0 else False
 
 
 if __name__ == "__main__":
