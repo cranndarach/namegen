@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 
-import wordutils
+import lexlib as lx
 
 
 namefile = "NationalNames.csv"
-names = wordutils.get_words(namefile, "Name", ",")
+names = lx.get_words(namefile, "Name", ",")
 with open("names.csv", "w") as f:
     f.write("\n".join(names))

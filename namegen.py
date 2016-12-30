@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 import random as rd
-import wordutils
+import lexlib as lx
 
 
 def generate(clusters, vowels, stop_len=9, min_len=1, vowel_mod=6):
@@ -42,4 +42,4 @@ if __name__ == "__main__":
         namestring = f.read()
     names = namestring.split("\n")
     vowels = ['a', 'e', 'i', 'o', 'u', 'y']
-    clusters = wordutils.clusters(names, vowels)
+    clusters = lx.clusters(names, vowels)
