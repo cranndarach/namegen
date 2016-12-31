@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+import sys
 import random as rd
 import lexlib as lx
 
@@ -35,11 +36,18 @@ def check(num):
     return True if rd.randrange(num) == 0 else False
 
 
-if __name__ == "__main__":
-    # namefile = "ext_names.txt"
-    namefile = "names.csv"
+def main(**kwargs):
+    if sys.argv[1]:
+        namefile = str(sys.argv[1])
+    else:
+        # namefile = "ext_names.txt"
+        namefile = kwargs.get("names", "names.csv")
     with open(namefile, "r") as f:
         namestring = f.read()
     names = namestring.split("\n")
     vowels = ['a', 'e', 'i', 'o', 'u', 'y']
     clusters = lx.clusters(names, vowels)
+    return clusters, vowels
+
+if __name__ == "__main__":
+    clusters, vowels = main()
