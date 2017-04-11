@@ -72,8 +72,9 @@ generate_many(clusters, vowels, how_many=10)
 
 ## License and use
 
-This *software* is licensed under the terms of the MIT license, copyright (c) 2016
+You are welcome to use the names you generate freely without attribution (though
+a link would be nice when it's reasonable).
+
+The *software* is licensed under the terms of the MIT license, copyright (c) 2016
 R. Steiner, meaning roughly that you can use, modify, and distribute it as you 
 like as long as you give credit (see [LICENSE.md](./LICENSE.md) for details).
-You are welcome to use the *names* you generate freely without attribution, though
-a link would be nice when it's reasonable. :)
